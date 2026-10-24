@@ -95,7 +95,7 @@ Demo flow: visitor enters details and preferred service/date/time; form validate
 
 ## 10. Cloudflare hosting and demo URL
 - Deploy the demo as a lightweight static site through Cloudflare Pages or Cloudflare Workers static assets, choosing the simplest option supported by the repository/build output.
-- Use the custom subdomain arafat.dforet.me as the shareable demo address.
+- Use the custom subdomain dr-arafat.d4f.me as the shareable demo address.
 - Connect the subdomain to the Cloudflare deployment and configure DNS/SSL through the user's existing Cloudflare account.
 - Keep deployment configuration and build instructions in the repository; do not put secrets or account tokens in Git.
 - Verify the deployed site loads over HTTPS on mobile and desktop before sharing.
@@ -125,4 +125,4 @@ Build a complete responsive website demo from this project plan. Start with the 
 
 Implement the page sections, provisional service cards, video-ready hero with muted looping video support and poster fallback, gallery, contact/location block, and validated WhatsApp appointment-request form as described above. Use the supplied WhatsApp number and address exactly. Treat unverified credentials, hours, availability, service details, and offers as editable placeholders. Do not invent facts or publish the 35% offer. The booking flow must say request, open a prepared WhatsApp message, and never claim confirmation.
 
-Make animations subtle and respect reduced motion. Optimize images/video, lazy-load below-fold media, use accessible semantic markup, and check mobile, tablet, and desktop layouts. Prepare the project for Cloudflare Pages or Workers static hosting, whichever best fits the generated app. Document build/deploy steps and configure the demo for the custom subdomain arafat.dforet.me; do not commit secrets or claim deployment until it is actually verified. Return a working demo and a concise list of inputs still needed before launch.
+Make animations subtle and respect reduced motion. Optimize images/video, lazy-load below-fold media, use accessible semantic markup, and check mobile, tablet, and desktop layouts. Prepare the project for Cloudflare Pages or Workers static hosting, whichever best fits the generated app. Document build/deploy steps and configure the demo for the custom subdomain dr-arafat.d4f.me; do not commit secrets or claim deployment until it is actually verified. Return a working demo and a concise list of inputs still needed before launch.
