@@ -78,15 +78,6 @@
 </head>
 <body>
 
-  <!-- Demo Notice & Pre-Launch Verification Bar -->
-  <div class="demo-banner" role="region" aria-label="Demo Status Banner">
-    <span class="badge">Demo Preview</span>
-    <span>Building for <strong>dr-arafat.d4f.me</strong>. Clinical details &amp; credentials subject to final verification.</span>
-    <button type="button" id="openChecklistBtn" aria-haspopup="dialog">
-      Review Launch Checklist &rarr;
-    </button>
-  </div>
-
   <!-- Main Sticky Header -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
@@ -203,45 +194,56 @@
           </div>
         </div>
 
-        <!-- Hero Doctor Spotlight Card -->
-        <aside class="hero-doctor-card" aria-label="Dentist Profile Preview">
-          <div class="hero-doc-header">
-            <div class="doc-avatar-wrap">
+        <!-- Hero Doctor Spotlight Card (Prominent Glowing Showcase) -->
+        <aside class="hero-doctor-card" aria-label="Lead Dental Surgeon Showcase">
+          <!-- Glowing Golden Framed Portrait (Large & Striking) -->
+          <div class="hero-doc-portrait-wrapper">
+            <div class="hero-doc-portrait-frame">
               <picture>
                 <source srcset="/assets/images/doctor-arafath-white-coat.webp" type="image/webp" />
-                <img src="/assets/images/doctor-arafath-white-coat.jpg" alt="Dr. Arafath Badrul Munna Portrait" class="doc-avatar-img" width="72" height="72" />
+                <img src="/assets/images/doctor-arafath-white-coat.jpg" alt="Dr. Arafath Badrul Munna, Dental Surgeon BDS (DU)" class="hero-doc-portrait-img" width="768" height="1024" fetchpriority="high" />
               </picture>
-            </div>
-            <div class="doc-meta">
-              <h3>Dr. Arafath Badrul Munna</h3>
-              <div class="doc-role">Dental Surgeon &bull; BDS (DU)</div>
-              <div class="doc-verify">PGT (Conservative Dentistry &amp; Endodontics)</div>
+              <div class="portrait-prestige-tag">
+                <svg width="14" height="14" viewBox="88 30 94 102" fill="currentColor" aria-hidden="true">
+                  <path d="M 145.184 38.519 C 139.811 40.853, 136.623 43.673, 138.760 44.204 C 139.717 44.441, 141.625 44.313, 143 43.918 C 151.513 41.472, 158.782 43.519, 162.089 49.292 C 165.309 54.913, 165.419 75.165, 162.293 86.794 C 159.944 95.529, 161.126 97.248, 164.375 89.823 C 170.671 75.440, 172.717 52.725, 168.450 44.592 C 164.778 37.593, 153.870 34.746, 145.184 38.519 M 105.147 45.530 C 94.766 54.265, 98.049 82.989, 111.816 103.874 C 115.359 109.248, 120.019 112.989, 123.179 112.996 C 125.858 113.002, 127.618 110.554, 130.526 102.776 C 134.879 91.135, 137.628 88.437, 141 92.500 C 142.696 94.543, 144 94.385, 144 92.136 C 144 89.727, 139.273 85, 136.864 85 C 134.264 85, 131.226 88.314, 128.571 94.045 C 124.150 103.587, 122.071 104.160, 116.177 97.463 C 108.465 88.703, 103.538 71.109, 105.874 60.673 C 108.741 47.863, 113.385 46.909, 126.588 56.418 C 135.693 62.976, 139.659 64.728, 142.728 63.551 C 144.095 63.026, 143.621 62.504, 140.480 61.075 C 138.291 60.079, 133.350 56.460, 129.500 53.032 C 117.789 42.606, 111.079 40.538, 105.147 45.530 M 95.398 107.750 C 95.812 108.469, 95.584 109, 94.863 109 C 92.298 109, 100.453 115.946, 106.371 118.803 C 127.395 128.953, 157.586 126.461, 172.952 113.309 C 177.850 109.117, 177.171 106.318, 172.127 109.909 C 153.020 123.515, 112.712 122.858, 97.089 108.687 C 95.763 107.484, 95.002 107.063, 95.398 107.750" />
+                </svg>
+                <span>Lead Surgeon</span>
+              </div>
             </div>
           </div>
 
-          <ul class="hero-doc-quickfacts">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              <span>Autoclave Sterilization &amp; Sealed Instruments</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              <span>Personalized One-on-One Consultations</span>
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-              </svg>
-              <span>WhatsApp Coordination: +880 1684-885861</span>
-            </li>
-          </ul>
+          <!-- Doctor Meta & Qualifications Below Photo -->
+          <div class="hero-doc-details">
+            <div class="doc-meta-block">
+              <h3 class="hero-doc-name">Dr. Arafath Badrul Munna</h3>
+              <div class="doc-role-badge">Dental Surgeon &bull; BDS (DU)</div>
+              <div class="doc-sub-spec">PGT (Conservative Dentistry &amp; Endodontics)</div>
+            </div>
+
+            <ul class="hero-doc-quickfacts">
+              <li>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Autoclave Sterilization &amp; Sealed Kits</span>
+              </li>
+              <li>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Personalized Aesthetic Consultations</span>
+              </li>
+              <li>
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>WhatsApp Coordination: +880 1684-885861</span>
+              </li>
+            </ul>
+          </div>
         </aside>
       </div>
     </section>
