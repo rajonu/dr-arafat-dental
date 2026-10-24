@@ -1,0 +1,11 @@
+# Cloudflare Workers / Pages configuration for Dr. Arafath Dental Demo
+name = "dr-arafat-dental"
+compatibility_date = "2024-10-01"
+
+[assets]
+directory = "./dist"
+
+# To deploy via Wrangler CLI:
+# npx wrangler pages deploy dist --project-name dr-arafat-dental
+# Or via Workers:
+# npx wrangler deploy

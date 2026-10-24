@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450">
+  <defs>
+    <linearGradient id="gGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dfb76c" />
+      <stop offset="100%" stop-color="#9a7530" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" fill="#09182b" />
+  <rect x="16" y="16" width="568" height="418" rx="12" fill="none" stroke="url(#gGrad)" stroke-width="1.2" stroke-opacity="0.3" />
+  
+  <!-- Subtle background grid -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="150" x2="600" y2="150" />
+    <line x1="0" y1="300" x2="600" y2="300" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+  </g>
+
+  <!-- Center Badge -->
+  <g transform="translate(300, 180)">
+    <circle cx="0" cy="0" r="44" fill="#081320" stroke="url(#gGrad)" stroke-width="2" />
+    <!-- Tooth silhouette -->
+    <path d="M -12,-16 C -6,-16 0,-12 0,-8 C 0,-12 6,-16 12,-16 C 18,-16 20,-8 18,-2 C 16,6 12,18 8,24 C 6,26 4,26 3,24 C 2,20 0,16 -1,16 C -2,16 -4,20 -5,24 C -6,26 -8,26 -9,24 C -13,18 -17,6 -19,-2 C -21,-8 -18,-16 -12,-16 Z" fill="none" stroke="url(#gGrad)" stroke-width="2" />
+  </g>
+
+  <text x="300" y="275" font-family="'Cinzel', 'Playfair Display', serif" font-size="20" font-weight="700" letter-spacing="2" fill="#ffffff" text-anchor="middle">
+    DIGITAL RADIOGRAPHY
+  </text>
+  <text x="300" y="308" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" fill="#94a3b8" text-anchor="middle">
+    Low-dose precision diagnostics and instant high-definition tooth imaging.
+  </text>
+  <text x="300" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" fill="url(#gGrad)" text-anchor="middle">
+    [Supplied Clinic Photo Slot &bull; Asad Avenue, Dhaka]
+  </text>
+</svg>

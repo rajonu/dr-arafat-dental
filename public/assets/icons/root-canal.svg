@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Tooth outline with split roots -->
+      <path d="M 12 18 C 12 11 16 7 24 7 C 32 7 36 11 36 18 C 36 26 33 34 31 41 C 30 43 28 43 27 41 C 26 36 24 30 22 30 C 20 30 18 36 17 41 C 16 43 14 43 13 41 C 11 34 8 26 8 18" stroke="#c5a059" stroke-width="2" />
+      <!-- Canal pathways & precision gutta-percha filling line -->
+      <path d="M 24 14 L 24 24" stroke="#f43f5e" stroke-width="2" />
+      <path d="M 24 24 C 23 27 20 33 19 38" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" />
+      <path d="M 24 24 C 25 27 28 33 29 38" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" />
+      <circle cx="24" cy="14" r="2.5" fill="#f43f5e" fill-opacity="0.3" stroke="#f43f5e" stroke-width="1.5" />
+    </svg>

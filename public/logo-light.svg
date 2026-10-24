@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64">
+  <defs>
+    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ebd08e" />
+      <stop offset="50%" stop-color="#c5a059" />
+      <stop offset="100%" stop-color="#a07c33" />
+    </linearGradient>
+    <linearGradient id="logoShield" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#142c4c" />
+      <stop offset="100%" stop-color="#0b1a2e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem Badge -->
+  <g transform="translate(4, 4)">
+    <rect width="56" height="56" rx="14" fill="#f4f5f7" stroke="url(#logoGold)" stroke-width="1.2" stroke-opacity="0.6"/>
+    <g transform="translate(10, 6) scale(0.98)">
+      <!-- Tooth + A Contour -->
+      <path d="M 18,3 C 23,3 28,5 31,9 C 35,14 36,22 34,29 C 32,35 30,40 29,45 C 28,47 26,47 25,45 C 24,41 22,35 21,31 C 20,28 17,28 16,31 C 15,35 13,41 12,45 C 11,47 9,47 8,45 C 7,40 5,35 3,29 C 1,22 2,14 6,9 C 9,5 14,3 18,3 Z" 
+            fill="none" stroke="url(#logoGold)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+      <!-- A Crossbar -->
+      <path d="M 10,24 L 26,24" stroke="url(#logoGold)" stroke-width="2.4" stroke-linecap="round" />
+      <!-- Inner apex detail -->
+      <path d="M 18,10 L 18,17" stroke="url(#logoGold)" stroke-width="2" stroke-linecap="round" />
+      <circle cx="18" cy="10" r="1.2" #c5a059 />
+    </g>
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(72, 16)">
+    <!-- Primary Title -->
+    <text x="0" y="18" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="20" font-weight="700" letter-spacing="1.5" fill="#0b192c">
+      DR. ARAFATH
+    </text>
+    <!-- Subtitle -->
+    <text x="0" y="34" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="3.2" fill="url(#logoGold)">
+      DENTAL CLINIC &bull; DHAKA
+    </text>
+  </g>
+</svg>
