@@ -20,7 +20,6 @@
   <rect width="1920" height="1080" fill="url(#bgH)" />
   <rect width="1920" height="1080" fill="url(#lightBeam)" />
 
-  <!-- Modern Architectural Dental Clinic Silhouette Lines -->
   <g opacity="0.18" stroke="url(#goldH)" stroke-width="1.5">
     <line x1="200" y1="0" x2="200" y2="1080" />
     <line x1="600" y1="0" x2="600" y2="1080" />
@@ -30,16 +29,13 @@
 
   <!-- Operatory Chair Silhouette on the right -->
   <g transform="translate(1100, 320)" opacity="0.35">
-    <!-- Dental Chair -->
     <path d="M 120,480 C 180,480 260,450 320,400 L 460,280 C 490,250 510,210 500,170 C 490,130 450,110 410,120 L 290,160 C 230,180 180,240 160,300 Z" fill="#1e3a5f" stroke="url(#goldH)" stroke-width="2" />
     <rect x="220" y="470" width="160" height="40" rx="10" fill="#0f243c" stroke="url(#goldH)" stroke-width="1.5" />
     <rect x="280" y="510" width="40" height="160" fill="#0f243c" />
     <rect x="200" y="670" width="200" height="24" rx="12" fill="#0b1a2e" stroke="url(#goldH)" stroke-width="1" />
     
-    <!-- Overhead Surgical LED Lamp -->
     <path d="M 60,650 L 60,180 C 60,100 120,60 200,60 L 320,60" fill="none" stroke="url(#goldH)" stroke-width="6" stroke-linecap="round" />
     <ellipse cx="340" cy="60" rx="45" ry="20" fill="#c5a059" fill-opacity="0.8" />
-    <!-- Light cone -->
     <polygon points="340,75 220,380 460,380" fill="url(#goldH)" opacity="0.15" />
   </g>
 

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "potrace": "^2.1.8",
     "vite": "^6.2.0",
     "wrangler": "^4.152.0"
   }

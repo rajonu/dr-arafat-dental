@@ -240,6 +240,178 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // 6.5 Interactive Clinic Practice Slider (Modern Web Guidance: scroll-snap-state-sync)
+  const sliderTrack = document.getElementById('clinicSliderTrack');
+  const prevBtn = document.querySelector('.slider-nav-btn.prev-btn');
+  const nextBtn = document.querySelector('.slider-nav-btn.next-btn');
+  const sliderDots = document.querySelectorAll('.slider-dot');
+  const activeIndexEl = document.querySelector('.slider-counter .active-index');
+  const progressBar = document.getElementById('sliderProgressBar');
+  const slides = document.querySelectorAll('.clinic-slide');
+
+  if (sliderTrack && slides.length > 0) {
+    let currentIndex = 0;
+    let autoplayTimer = null;
+    let progressTimer = null;
+    let progressPercent = 0;
+    const AUTOPLAY_DURATION = 5000;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const updateSliderState = (index) => {
+      currentIndex = index;
+      if (activeIndexEl) {
+        activeIndexEl.textContent = String(index + 1).padStart(2, '0');
+      }
+      sliderDots.forEach((dot, idx) => {
+        const isActive = idx === index;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-selected', isActive ? 'true' : 'false');
+      });
+      slides.forEach((slide, idx) => {
+        slide.classList.toggle('is-active', idx === index);
+      });
+      resetProgress();
+    };
+
+    const scrollToIndex = (index) => {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      const targetSlide = slides[index];
+      if (targetSlide) {
+        sliderTrack.scrollTo({
+          left: targetSlide.offsetLeft,
+          behavior: prefersReducedMotion ? 'auto' : 'smooth'
+        });
+      }
+      updateSliderState(index);
+    };
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        scrollToIndex(currentIndex - 1);
+        restartAutoplay();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        scrollToIndex(currentIndex + 1);
+        restartAutoplay();
+      });
+    }
+
+    sliderDots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        scrollToIndex(idx);
+        restartAutoplay();
+      });
+    });
+
+    // Keyboard navigation when track is focused
+    sliderTrack.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        scrollToIndex(currentIndex - 1);
+        restartAutoplay();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        scrollToIndex(currentIndex + 1);
+        restartAutoplay();
+      }
+    });
+
+    // Modern Web Guidance: scroll-snap-state-sync using IntersectionObserver
+    const slideObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+          const index = Array.from(slides).indexOf(entry.target);
+          if (index !== -1 && index !== currentIndex) {
+            updateSliderState(index);
+          }
+        }
+      });
+    }, {
+      root: sliderTrack,
+      threshold: 0.6
+    });
+
+    slides.forEach(slide => slideObserver.observe(slide));
+
+    // Also support native scrollsnapchange if available
+    if ('onscrollsnapchange' in window) {
+      sliderTrack.addEventListener('scrollsnapchange', (e) => {
+        const snappedEl = e.snapTargetInline || e.snapTargetBlock;
+        if (snappedEl) {
+          const index = Array.from(slides).indexOf(snappedEl);
+          if (index !== -1) updateSliderState(index);
+        }
+      });
+    }
+
+    // Autoplay & Progress Bar
+    const resetProgress = () => {
+      progressPercent = 0;
+      if (progressBar) progressBar.style.width = '0%';
+    };
+
+    const startAutoplay = () => {
+      if (prefersReducedMotion) return;
+      stopAutoplay();
+      const interval = 50;
+      const step = 100 / (AUTOPLAY_DURATION / interval);
+      
+      progressTimer = setInterval(() => {
+        progressPercent += step;
+        if (progressBar) progressBar.style.width = `${Math.min(progressPercent, 100)}%`;
+      }, interval);
+
+      autoplayTimer = setTimeout(() => {
+        scrollToIndex(currentIndex + 1);
+        startAutoplay();
+      }, AUTOPLAY_DURATION);
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayTimer) clearTimeout(autoplayTimer);
+      if (progressTimer) clearInterval(progressTimer);
+      resetProgress();
+    };
+
+    const restartAutoplay = () => {
+      stopAutoplay();
+      startAutoplay();
+    };
+
+    sliderTrack.parentElement.addEventListener('mouseenter', stopAutoplay);
+    sliderTrack.parentElement.addEventListener('mouseleave', startAutoplay);
+    sliderTrack.parentElement.addEventListener('focusin', stopAutoplay);
+    sliderTrack.parentElement.addEventListener('focusout', startAutoplay);
+    sliderTrack.addEventListener('touchstart', stopAutoplay, { passive: true });
+
+    startAutoplay();
+
+    // Slide Media Lightbox trigger
+    slides.forEach(slide => {
+      const mediaWrap = slide.querySelector('.slide-media-wrap');
+      if (mediaWrap) {
+        mediaWrap.addEventListener('click', () => {
+          const img = mediaWrap.querySelector('img');
+          const title = slide.querySelector('.slide-title')?.textContent || 'Clinical Photograph';
+          const badge = slide.querySelector('.slide-badge')?.textContent || '';
+          const desc = slide.querySelector('.slide-text')?.textContent || '';
+          if (lightboxModal && lightboxImg && img) {
+            lightboxImg.src = img.currentSrc || img.src;
+            lightboxImg.alt = title;
+            if (lightboxCaption) {
+              lightboxCaption.textContent = `${badge} — ${title}: ${desc}`;
+            }
+            lightboxModal.showModal();
+          }
+        });
+      }
+    });
+  }
+
   // 7. Photo Gallery Lightbox
   const galleryCards = document.querySelectorAll('.gallery-card');
   const lightboxImg = document.getElementById('lightboxImg');

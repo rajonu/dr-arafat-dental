@@ -990,6 +990,313 @@ body {
   background: var(--color-navy-darkest);
 }
 
+/* ==========================================================================
+   Interactive Clinic Practice Slider & Carousel (Modern Web Guidance)
+   ========================================================================== */
+.clinic-slider-wrapper {
+  position: relative;
+  background: var(--color-navy-card);
+  border: 1px solid var(--color-navy-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 3.5rem;
+  box-shadow: 0 24px 48px -12px rgba(2, 6, 14, 0.6);
+}
+
+.slider-header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: rgba(8, 20, 35, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-navy-border);
+}
+
+.slider-counter {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--color-text-secondary);
+}
+
+.slider-counter .active-index {
+  color: var(--color-gold-light);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.slider-nav-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-nav-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-circle);
+  background: var(--color-navy-surface);
+  border: 1px solid var(--color-gold-border);
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-nav-btn:hover {
+  background: var(--color-gold);
+  color: var(--color-navy-darkest);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 160, 89, 0.35);
+}
+
+.slider-nav-btn:active {
+  transform: translateY(0);
+}
+
+.clinic-slider-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  outline: none;
+}
+
+.clinic-slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+.clinic-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-navy-card);
+}
+
+@media (min-width: 900px) {
+  .clinic-slide {
+    flex-direction: row;
+    min-height: 460px;
+  }
+}
+
+.slide-media-wrap {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: #060e18;
+}
+
+@media (max-width: 899px) {
+  .slide-media-wrap {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .slide-media-wrap {
+    flex: 0 0 54%;
+    height: auto;
+  }
+}
+
+.slide-media-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-media-wrap:hover img {
+  transform: scale(1.04);
+}
+
+.slide-zoom-pill {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(8, 20, 35, 0.88);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--color-gold-border);
+  color: #ffffff;
+  padding: 0.45rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  transition: all var(--transition-fast);
+  pointer-events: none;
+}
+
+.slide-media-wrap:hover .slide-zoom-pill {
+  background: var(--color-gold);
+  color: var(--color-navy-darkest);
+  border-color: var(--color-gold);
+}
+
+.slide-content-wrap {
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+@media (min-width: 900px) {
+  .slide-content-wrap {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.slide-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  background: rgba(197, 160, 89, 0.12);
+  border: 1px solid var(--color-gold-border);
+  color: var(--color-gold-light);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 1rem;
+  width: fit-content;
+}
+
+.slide-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .slide-title {
+    font-size: 1.85rem;
+  }
+}
+
+.slide-text {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.slide-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.slide-features li {
+  font-size: 0.88rem;
+  color: #e2e8f0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.slide-cta {
+  align-self: flex-start;
+}
+
+.slider-footer-controls {
+  position: relative;
+  background: rgba(8, 20, 35, 0.95);
+  border-top: 1px solid var(--color-navy-border);
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.slider-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-gold-dark), var(--color-gold-light));
+  transition: width 0.1s linear;
+}
+
+.slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-circle);
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slider-dot:hover {
+  background: var(--color-gold-light);
+}
+
+.slider-dot.is-active {
+  width: 28px;
+  border-radius: 9999px;
+  background: var(--color-gold);
+  box-shadow: 0 0 10px rgba(197, 160, 89, 0.6);
+}
+
+/* Modern Web Guidance: carousel-slide-effects Progressive Enhancement */
+@supports ((animation-timeline: view()) and (animation-range: entry)) {
+  @media (prefers-reduced-motion: no-preference) {
+    .clinic-slide {
+      animation: carousel-fade auto linear both;
+      animation-timeline: view(inline);
+    }
+    @keyframes carousel-fade {
+      0% {
+        opacity: 0.55;
+        transform: scale(0.97);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0.55;
+        transform: scale(0.97);
+      }
+    }
+  }
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: 1fr;

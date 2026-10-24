@@ -1,40 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 68" width="350" height="68">
   <defs>
-    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ebd08e" />
+    <linearGradient id="hdrGoldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b88a38" />
       <stop offset="50%" stop-color="#c5a059" />
-      <stop offset="100%" stop-color="#a07c33" />
-    </linearGradient>
-    <linearGradient id="logoShield" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#142c4c" />
-      <stop offset="100%" stop-color="#0b1a2e" />
+      <stop offset="100%" stop-color="#8c6823" />
     </linearGradient>
   </defs>
-
   <!-- Emblem Badge -->
   <g transform="translate(4, 4)">
-    <rect width="56" height="56" rx="14" fill="#f4f5f7" stroke="url(#logoGold)" stroke-width="1.2" stroke-opacity="0.6"/>
-    <g transform="translate(10, 6) scale(0.98)">
-      <!-- Tooth + A Contour -->
-      <path d="M 18,3 C 23,3 28,5 31,9 C 35,14 36,22 34,29 C 32,35 30,40 29,45 C 28,47 26,47 25,45 C 24,41 22,35 21,31 C 20,28 17,28 16,31 C 15,35 13,41 12,45 C 11,47 9,47 8,45 C 7,40 5,35 3,29 C 1,22 2,14 6,9 C 9,5 14,3 18,3 Z" 
-            fill="none" stroke="url(#logoGold)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
-      <!-- A Crossbar -->
-      <path d="M 10,24 L 26,24" stroke="url(#logoGold)" stroke-width="2.4" stroke-linecap="round" />
-      <!-- Inner apex detail -->
-      <path d="M 18,10 L 18,17" stroke="url(#logoGold)" stroke-width="2" stroke-linecap="round" />
-      <circle cx="18" cy="10" r="1.2" #c5a059 />
+    <rect width="60" height="60" rx="14" fill="#081423" stroke="url(#hdrGoldLight)" stroke-width="1.4" />
+    <g transform="translate(30, 30) scale(0.48) translate(-135, -82)">
+      <path d="M 145.184 38.519 C 139.811 40.853, 136.623 43.673, 138.760 44.204 C 139.717 44.441, 141.625 44.313, 143 43.918 C 151.513 41.472, 158.782 43.519, 162.089 49.292 C 165.309 54.913, 165.419 75.165, 162.293 86.794 C 159.944 95.529, 161.126 97.248, 164.375 89.823 C 170.671 75.440, 172.717 52.725, 168.450 44.592 C 164.778 37.593, 153.870 34.746, 145.184 38.519 M 105.147 45.530 C 94.766 54.265, 98.049 82.989, 111.816 103.874 C 115.359 109.248, 120.019 112.989, 123.179 112.996 C 125.858 113.002, 127.618 110.554, 130.526 102.776 C 134.879 91.135, 137.628 88.437, 141 92.500 C 142.696 94.543, 144 94.385, 144 92.136 C 144 89.727, 139.273 85, 136.864 85 C 134.264 85, 131.226 88.314, 128.571 94.045 C 124.150 103.587, 122.071 104.160, 116.177 97.463 C 108.465 88.703, 103.538 71.109, 105.874 60.673 C 108.741 47.863, 113.385 46.909, 126.588 56.418 C 135.693 62.976, 139.659 64.728, 142.728 63.551 C 144.095 63.026, 143.621 62.504, 140.480 61.075 C 138.291 60.079, 133.350 56.460, 129.500 53.032 C 117.789 42.606, 111.079 40.538, 105.147 45.530 M 95.398 107.750 C 95.812 108.469, 95.584 109, 94.863 109 C 92.298 109, 100.453 115.946, 106.371 118.803 C 127.395 128.953, 157.586 126.461, 172.952 113.309 C 177.850 109.117, 177.171 106.318, 172.127 109.909 C 153.020 123.515, 112.712 122.858, 97.089 108.687 C 95.763 107.484, 95.002 107.063, 95.398 107.750" fill="url(#hdrGoldLight)" fill-rule="evenodd" />
     </g>
   </g>
-
   <!-- Brand Typography -->
-  <g transform="translate(72, 16)">
-    <!-- Primary Title -->
-    <text x="0" y="18" font-family="'Cinzel', 'Playfair Display', 'Times New Roman', Georgia, serif" font-size="20" font-weight="700" letter-spacing="1.5" fill="#0b192c">
+  <g transform="translate(76, 17)">
+    <text x="0" y="20" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="21" font-weight="700" letter-spacing="1.2" fill="#0b192c">
       DR. ARAFATH
     </text>
-    <!-- Subtitle -->
-    <text x="0" y="34" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="9.5" font-weight="600" letter-spacing="3.2" fill="url(#logoGold)">
-      DENTAL CLINIC &bull; DHAKA
+    <text x="0" y="37" font-family="'Plus Jakarta Sans', sans-serif" font-size="9.5" font-weight="600" letter-spacing="3.2" fill="url(#hdrGoldLight)">
+      DENTAL CLINIC &#8226; DHAKA
     </text>
   </g>
 </svg>
